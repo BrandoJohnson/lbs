@@ -1,2 +1,89 @@
 <?php
-// Silence is golden.
+/*
+Theme Name: Little Blind Spot
+Theme URI: http://www.brandojohnson.com
+Description: A theme built by Brandon Johnson
+Author: Brandon Johnson
+Author URI: http://www.brandojohnson.com
+Version: 1.0
+Tags: responsive, white, bootstrap
+
+License: Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
+License URI: http://creativecommons.org/licenses/by-sa/3.0/
+*/
+
+?>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xasp1/DTD/xhtm1-transitional.dtd">
+
+<html>
+<head>
+    <title>Window Treatments Hopkins MN | Little Blind Spot</title>
+    <meta name="DESCRIPTION" content="Little Blind Spot and Shutters N Shades in Hopkins, MN provides honest, quality customer service and expertise for residential and commercial window coverings.">
+    <meta name="KEYWORDS" content="little blind spot, blinds hopkins, residential shades hopkins, commercial shutters mn, residential shutters,shades hopkins, window grills, motorized blinds">
+    <!-- Styles -->
+    <link href="<?php bloginfo('stylesheet_url');?>" rel="stylesheet">
+
+    <script type="text/javascript" src="js/RAA_FlashWriter.js"></script>
+    <script type="text/vbscript" src="js/RAA_FlashWriter.vbs"></script>
+    <script type="text/javascript" src="js/swfobject.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+
+
+
+    <script type="text/javascript">
+        var flashvars = {};
+        var params = {};
+        params.wmode = "opaque";
+        params.bgcolor = "#E9E3C1";
+        var attributes = {};
+        swfobject.embedSWF("flash/lbs_splashIMG_v1.swf", "splashFlash", "626", "346", "9.0.0", false, flashvars, params, attributes);
+    </script>
+
+    <?php wp_enqueue_script("jquery"); ?>
+    <?php wp_head(); ?>
+
+</head>
+
+
+<body>
+
+<div class="maincontainer">
+    <div class="toptabbar">
+        <div class="toptabs">
+            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/toptabs.gif" width="526" height="28" alt="custom vertical blinds mn" usemap="#toptabs">
+            <br>
+        </div>
+
+        <div class="topphone">
+            Phone: 952-935-4353
+            <br clear="all">
+        </div>
+    </div>
+
+    <map name="toptabs">
+        <area coords="2,2,151,28" alt="Little Blind Spot" title="Little Blind Spot" href="http://www.littleblindspot.com/index.asp">
+        <area coords="167,-1,319,28" alt="Shutters N shades" title="Shutters N shades" href="http://www.shuttersnshades.com/"
+              onclick="openThis(this.href,1024,768);return false;">
+        <area coords="335,0,521,35" alt="US Automated Shade" title="US Automated Shade" href="http://shop.usautomated.com"
+              onclick="openThis(this.href,1024,768);return false;">
+    </map>
+
+    <div class="toppagebar">
+        <div class="toppagelogo">
+            <a title="Little Blind Spot" href="/index.asp"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/littleblindspotlogo.jpg" width="325" height="111" alt="custom vertical blinds"></a><br>
+        </div>
+
+        <div class="toppageright">
+            <div class="topnavbox">
+                <a title="Our Services" href="/misc/services.asp">Services</a>
+                <a title="Residential Blinds" href="/residential/residential.asp">Residential</a>
+                <a title="Commercial Blinds" href="/commercial/commercial.asp">Commercial</a>
+                <a title="About the Little Blind Spot" href="/misc/about.asp">About</a>
+                <a title="Free In-Home Consultation" href="/misc/free-in-home-consultation.asp">Free In-Home Consultation</a>
+                <a title="Little Blind Spot Locations" href="/misc/locations.asp">Location</a>
+
+            </div>
+        </div>
+    </div>
+

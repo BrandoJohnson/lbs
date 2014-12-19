@@ -1,2 +1,535 @@
-<?php
-// Silence is golden.
+/*  TEXT -------------------------------------------    */
+
+div  {
+    font: 12px Arial,helvetica,MS san-serif;
+    text-decoration:none;
+    color:#505050;
+    line-height:20px;
+}
+
+.georgia {
+    font:12px Georgia,"georgia,Times New Roman", Times;
+    line-height:20px;
+}
+
+a {
+    text-decoration:none;
+    color : #964304;
+}
+
+a:hover {
+    text-decoration:underline;
+    color : #964304;
+}
+
+.brownhead {
+    font:italic 20px Georgia,"georgia,Times New Roman", Times;
+    color:#964304;
+    line-height:30px;
+}
+
+.brownhead2 {
+    font:italic 24px Georgia,"georgia, Times New Roman", Times;
+    color:#964304;
+    line-height:40px;
+}
+
+.grayhead {
+    font:italic 18px Georgia,"georgia,Times New Roman", Times;
+    line-height:24px;
+}
+
+.grayhead2 {
+    color:#656460;
+    font:italic 24px Georgia,"georgia,Times New Roman", Times;
+    line-height:32px;
+}
+
+.greenhead {
+    font: 18px Arial,helvetica,MS san-serif;
+    line-height:25px;
+    color:#466e64;
+}
+
+.subhead {
+    font:bold 14px Arial,helvetica,MS san-serif;
+    line-height:25px;
+    color:#505050;
+}
+
+/*  GLOBAL PAGE SETTINGS-------------------------------------------    */
+
+* {
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    margin:0px;
+    padding:0px;
+}
+
+:-moz-any-link:focus {
+    outline:none;
+}
+
+form {
+    margin:0px;
+}
+
+textarea,select,input {
+    font-family:arial;
+}
+
+img {
+    border:0px;
+}
+
+ul {
+    margin:5px 0px 5px 16px;
+}
+
+.lfloat {
+    float:left;
+    display:inline;
+}
+
+
+body  {
+    margin:0px;
+    padding:0px;
+    text-align:center;
+    background: #999999;
+}
+
+.horiz_ul{
+    position:relative;
+    display:block;
+    text-align:center;
+}
+
+.horiz_ul li{
+    margin:2px;
+    padding:0;
+    list-style: none;
+    display: inline;
+    position: relative;
+    float:left;
+    font-weight:bold;
+}
+
+.horiz_ul img{
+    height:50px;
+    margin:0;
+    padding:0;
+}
+
+.maincontainer {
+    width:990px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:left;
+    padding-top:0px;
+    background: #f0ebcb;
+}
+
+.pagecontainer {
+    width:990px;
+    float:left;
+    display:inline;
+    background:#f0ebcb url(images/contentback.jpg) no-repeat;
+    height:auto;
+}
+
+/*  TOP TABS-------------------------------------------    */
+
+.toptabbar {
+    width:100%;
+    height:45px;
+    padding:0px 0px 0px 0px;
+    background:#ffffff;
+}
+
+.toptabs {
+    float:left;
+    display:inline;
+    width:526px;
+    padding:0px;
+    margin:17px 0px 0px 25px;
+    height:28px;
+}
+
+.topphone {
+    float:left;
+    display:inline;
+    width:350px;
+    margin:25px 0px 0px 71px;
+    color:#964304;
+    font: bold 12px arial, helvetica, sans-serif;
+    text-align:right;
+}
+
+/*  TOPNAV -------------------------------------------    */
+
+.toppagebar {
+    width:100%;
+    height:111px;
+}
+
+.toppagelogo {
+    float:left;
+    display:inline;
+    width:325px;
+    height:111px;
+}
+
+.toppageright {
+    float:left;
+    display:inline;
+    width:665px;
+    height:111px;
+    background:#ebe5c4 url(images/topnavback.jpg) no-repeat;
+}
+
+.topnavbox {
+    float:left;
+    display:inline;
+    width:630px;
+    height:30px;
+    margin:60px 0px 0px 20px;
+}
+
+.topnavbox a {
+    color:#964304;
+    font: bold 14px arial, helvetica, sans-serif;
+    float:left;
+    display:inline;
+    margin:0px 13px 0px 0px;
+    text-decoration:none;
+    line-height:20px;
+    word-spacing:-1.5px;
+}
+
+.topnavbox a:hover {
+    border-bottom: 3px solid #d4bb91;
+    text-decoration:none;
+}
+
+/*  LEFTNAV SUB NAV-------------------------------------------    */
+
+.leftsidebox {
+    float:left;
+    display:inline;
+    width:217px;
+    margin:0px 0px 0px 38px;
+}
+
+.leftnavbox {
+    float:left;
+    display:inline;
+    width:217px;
+    height:246px;
+    background:#e4dbac url(images/leftnav_backlines.jpg) no-repeat;
+    margin:0px 13px 0px 0px;
+}
+
+.leftnavbox a,a.leftnavon {
+    display:block;
+    width:180px;
+    color:#964304;
+    font:17px Georgia,Arial,"Times New Roman", Times;
+    line-height:28px;
+    text-align:center;
+    margin:12px 0px 0px 0px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.leftnavbox a:hover,a.leftnavon {
+    background:#ece7cf;
+    text-decoration:none;
+}
+
+.leftcontentbox,div.leftcontentbox {
+    float:left;
+    display:inline;
+    width:217px;
+    height:246px;
+    background:#e4dbac url(images/leftnav_back.jpg) no-repeat;
+    margin:0px 0px 10px 0px;
+}
+
+.leftcontentbox_nav,div.leftcontentbox_nav {
+    float:left;
+    display:inline;
+    width:217px;
+    height:246px;
+    background:#e4dbac url(images/leftnav_back_res.gif) no-repeat;
+    margin:0px 0px 10px 0px;
+}
+
+.boxright {
+    float:left;
+    display:inline;
+    width:218px;
+    height:auto;
+    background:#e4dbac url(images/boxrightback.jpg) bottom no-repeat;
+    margin:0px 0px 10px 0px;
+}
+
+table.formtable input, select  {
+    background:#e4dbac url(images/formback.jpg) ;
+    padding:2px;
+}
+
+table.formtable textarea  {
+    background:#e7dcb4;
+    padding:2px;
+}
+
+table.formtable   {
+    padding:2px;
+}
+
+.thumbnail  {
+    float:left;
+    display:inline;
+    width:131px;
+    height:131px;
+    margin:12px 27px 0px 0px;
+}
+
+.thmbnl{
+    border:6px solid #fff;
+}
+
+/*  FOOTER -------------------------------------------    */
+
+.footerbox  {
+    float:left;
+    display:inline;
+    width:990px;
+    height:140px;
+    background:#ffffff url(images/footer_back.jpg) no-repeat;
+}
+
+.footcontent {
+    width:260px;
+    margin:10px 0px 0px 0px;
+    text-align:right;
+    float:left;
+    display:inline;
+    font:italic 12px Georgia,"Times New Roman", Times;
+    color:#e3dcb4;
+    line-height:15px;
+}
+
+.footcontent a {
+    color:#fdb279;
+    font-style:normal;
+}
+
+.footcontent a:hover {
+    color : #fdb279;
+    text-decoration:underline;
+    font-style:normal;
+}
+
+.foothead {
+    font:italic 18px Georgia,"Times New Roman", Times;
+    line-height:40px;
+}
+
+.special {
+    margin: 0px 0px 0px 106px;
+}
+
+/*  Brandon Styles added June 2014   */
+
+.headline {
+    margin: 30px 0px 0px 0px;
+    text-align: center;
+}
+
+.headline-title {
+    font-size: 300%;
+    margin: 30px 0px 10px 0px;
+}
+
+.sub-title {
+    font-size: 100%;
+    width: 500px;
+    margin: 0px 0px 0px 250px;
+    text-align: center;
+}
+
+.window-image {
+    margin: 0px 20px 0px 0px;
+    float: right;
+}
+
+.quotes {
+    margin: 0px 0px 0px 80px;
+    color: #AC4304;
+}
+
+.quotes_desc {
+    width: 440px;
+    margin: 20px 0px 0px 100px;
+}
+
+.quotes_desc2 {
+    width: 440px;
+    margin: 0px 0px 0px 100px;
+}
+
+.quotes_desc3 {
+    width: 440px;
+    margin: 0px 0px 0px 100px;
+
+}
+
+.paragraph {
+    margin: 30px 0px 10px 0px;
+    float: left;
+}
+
+.transparent_background {
+    height: 100px;
+    width: 250px;
+    background-color: black;
+    opacity: 0.25;
+    margin: 300px 0px 0px 170px;
+    z-index: 2;
+    color: #ffffff;
+    padding: 7px 0px 0px 3px;
+    text-align: center;
+
+}
+
+.button {
+    margin: 0px 0px 0px 0px;
+    z-index: 5000;
+    width: 200px;
+    float: left;
+}
+
+.testimonial {
+    float: right;
+    width: 300px;
+    margin: -90px 20px 0px 0px;
+}
+
+.mecho-image {
+    width: 350px;
+    height: 245px;
+    margin: 35px 18px 0px 60px;
+    float: right;
+}
+
+.shade-image {
+    width: 350px;
+    height: 280px;
+    margin: 45px 34px 0px 60px;
+    float: right;
+}
+
+
+.select-image {
+    width: 350px;
+    height: 280px;
+    margin: 45px 39px 0px 60px;
+    float: right;
+}
+
+
+.transparent_background_index {
+    height: 100px;
+    width: 250px;
+    background-color: black;
+    opacity: 0.25;
+    margin: -130px 0px 0px 270px;
+    z-index: 2;
+    color: #ffffff;
+    padding: 7px 0px 0px 3px;
+    text-align: center;
+}
+
+.button2 {
+    margin: 0px 0px 0px 0px;
+    z-index: 5000;
+    width: 200px;
+    float: left;
+}
+
+.gallerytext {
+    width: 900px;
+}
+
+.gallerytext2 {
+    width: 600px;
+    float: left;
+    margin: 0px 0px 0px 70px;
+}
+
+.titlegal {
+    margin: 0px 0px -30px 170px;
+}
+
+.lfloat2 {
+    float:right;
+    display:inline;
+    width: 200px;
+    margin-right: 40px;
+}
+
+.caption {
+    margin: -40px 0px 0px 170px;
+}
+
+
+#slider2 {
+    height:400px;
+    width:650px;
+    margin: 0px 0px 20px 40px;
+    position:relative;
+    border-radius:4px;
+    overflow:hidden;
+    float: left;
+}
+
+
+.gallerytext3 {
+    width: 250px;
+    float: right;
+    margin: 0px 20px 0px 0px;
+}
+
+.button3 {
+    margin: 20px 0px 0px 60px;
+    width: 200px;
+    float: left;
+}
+
+
+#slider3 {
+    height:400px;
+    width:650px;
+    margin: 0px 40px 20px 0px;
+    position:relative;
+    border-radius:4px;
+    overflow:hidden;
+    float: right;
+}
+
+.gallerytext4 {
+    width: 250px;
+    float: left;
+    margin: 0px 0px 0px 40px;
+}
+
+.button4 {
+    margin: 20px 0px 0px 70px;
+    width: 200px;
+    float: left;
+}
+
+@import url('css/bootstrap.css');
+@import url('css/bootstrap-responsive.css');
