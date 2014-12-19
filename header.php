@@ -62,7 +62,7 @@ License URI: http://creativecommons.org/licenses/by-sa/3.0/
     </div>
 
     <map name="toptabs">
-        <area coords="2,2,151,28" alt="Little Blind Spot" title="Little Blind Spot" href="http://www.littleblindspot.com/index.asp">
+        <area coords="2,2,151,28" alt="Little Blind Spot" title="Little Blind Spot" href="/">
         <area coords="167,-1,319,28" alt="Shutters N shades" title="Shutters N shades" href="http://www.shuttersnshades.com/"
               onclick="openThis(this.href,1024,768);return false;">
         <area coords="335,0,521,35" alt="US Automated Shade" title="US Automated Shade" href="http://shop.usautomated.com"
@@ -71,7 +71,7 @@ License URI: http://creativecommons.org/licenses/by-sa/3.0/
 
     <div class="toppagebar">
         <div class="toppagelogo">
-            <a title="Little Blind Spot" href="/index.asp"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/littleblindspotlogo.jpg" width="325" height="111" alt="custom vertical blinds"></a><br>
+            <a title="Little Blind Spot" href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/littleblindspotlogo.jpg" width="325" height="111" alt="custom vertical blinds"></a><br>
         </div>
 
         <div class="toppageright">
@@ -79,7 +79,7 @@ License URI: http://creativecommons.org/licenses/by-sa/3.0/
                 <div class="inline">
                     <?php
                     wp_nav_menu(array(
-                        'theme_location' => 'main-menu',
+                        'theme_location' => 'header-menu',
                         'container' => '',
                     ));
                     ?>
