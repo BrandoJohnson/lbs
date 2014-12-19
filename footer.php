@@ -42,7 +42,7 @@
             </div>
         </div>
 
-                <!-- Le javascript
+                <!-- javascript
 ================================================== -->
                 <script src="../js/jquery.js"></script>
                 <script src="../js/bootstrap.js"></script>

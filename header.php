@@ -18,9 +18,9 @@ License URI: http://creativecommons.org/licenses/by-sa/3.0/
 
 <html>
 <head>
-    <title>Window Treatments Hopkins MN | Little Blind Spot</title>
-    <meta name="DESCRIPTION" content="Little Blind Spot and Shutters N Shades in Hopkins, MN provides honest, quality customer service and expertise for residential and commercial window coverings.">
-    <meta name="KEYWORDS" content="little blind spot, blinds hopkins, residential shades hopkins, commercial shutters mn, residential shutters,shades hopkins, window grills, motorized blinds">
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <title><?php wp_title('|', true, 'right'); ?><?php bloginfo('name'); ?></title>
+    <meta name="DESCRIPTION" content="<?php bloginfo('description'); ?>">
     <!-- Styles -->
     <link href="<?php bloginfo('stylesheet_url');?>" rel="stylesheet">
 
@@ -46,7 +46,7 @@ License URI: http://creativecommons.org/licenses/by-sa/3.0/
 </head>
 
 
-<body>
+<body <?php body_class(); ?>>
 
 <div class="maincontainer">
     <div class="toptabbar">
@@ -76,13 +76,14 @@ License URI: http://creativecommons.org/licenses/by-sa/3.0/
 
         <div class="toppageright">
             <div class="topnavbox">
-                <a title="Our Services" href="/misc/services.asp">Services</a>
-                <a title="Residential Blinds" href="/residential/residential.asp">Residential</a>
-                <a title="Commercial Blinds" href="/commercial/commercial.asp">Commercial</a>
-                <a title="About the Little Blind Spot" href="/misc/about.asp">About</a>
-                <a title="Free In-Home Consultation" href="/misc/free-in-home-consultation.asp">Free In-Home Consultation</a>
-                <a title="Little Blind Spot Locations" href="/misc/locations.asp">Location</a>
-
+                <div class="inline">
+                    <?php
+                    wp_nav_menu(array(
+                        'theme_location' => 'main-menu',
+                        'container' => '',
+                    ));
+                    ?>
+                </div>
             </div>
         </div>
     </div>
