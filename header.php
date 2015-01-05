@@ -14,7 +14,7 @@ License URI: http://creativecommons.org/licenses/by-sa/3.0/
 
 ?>
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xasp1/DTD/xhtm1-transitional.dtd">
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -29,16 +29,6 @@ License URI: http://creativecommons.org/licenses/by-sa/3.0/
     <script type="text/javascript" src="js/swfobject.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
 
-
-
-    <script type="text/javascript">
-        var flashvars = {};
-        var params = {};
-        params.wmode = "opaque";
-        params.bgcolor = "#E9E3C1";
-        var attributes = {};
-        swfobject.embedSWF("flash/lbs_splashIMG_v1.swf", "splashFlash", "626", "346", "9.0.0", false, flashvars, params, attributes);
-    </script>
 
     <?php wp_enqueue_script("jquery"); ?>
     <?php wp_head(); ?>

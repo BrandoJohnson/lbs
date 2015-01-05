@@ -21,4 +21,9 @@ function register_my_menus() {
 }
 add_action( 'init', 'register_my_menus' );
 
-?>
+
+add_action('wp_enqueue_styles', 'my_styles');
+function my_styles(){
+    wp_enqueue_style('twitter', 'css/bootstrap.css');
+    wp_enqueue_style('theme-css', get_stylesheet_uri(), 'twitter');
+}

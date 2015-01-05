@@ -1,5 +1,8 @@
 /*  TEXT -------------------------------------------    */
 
+@import url('css/bootstrap.css');
+@import url('css/bootstrap.min.css');
+
 div  {
     font: 12px Arial,helvetica,MS san-serif;
     text-decoration:none;
@@ -530,9 +533,6 @@ table.formtable   {
     width: 200px;
     float: left;
 }
-
-@import url('css/bootstrap.css');
-@import url('css/bootstrap-responsive.css');
 
 .inline li {
     display: inline;
