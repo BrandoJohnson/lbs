@@ -29,8 +29,8 @@ get_header(); ?>
 			</div>
 
 			<div style="margin:60px 20px 0px 20px;" align="center" class="georgia">
-				<i><strong>Call us at 952-935-4353</strong></i>
-				<a href="/misc/free-in-home-consultation.asp">click to set up an appointment</a>.
+				<i><strong>Call us at 952-935-4353</strong></i><br/>
+				<br/><a href="#" class="btn btn-success btn-medium"><i class="icon-white icon-heart"></i> Set Up Appointment</a>
 			</div>
 		</div>
 

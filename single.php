@@ -35,12 +35,75 @@
     </div>
 
     <div class="lfloat" style="width:646px;margin:0px 0px 0px 40px;">
-        <img src="<?php bloginfo('stylesheet_directory'); ?>/images/res_picture.jpg" width="646" height="246" alt="Residential Window Blinds">
         <br>
         <br>
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-            <?php the_content(); ?>
+            <?php
+            $args = array(
+                'post_type' => 'attachment',
+                'numberposts' => -1,
+                'post_status' => 'any',
+                'post_parent' => $post->ID
+            );
+
+            $attachments = get_posts($args);
+            if ($attachments) : ?>
+
+                <ul class="portfolio-image-list">
+                    <?php foreach($attachments as $attachment): ?>
+                        <li class="box">
+                            <figure>
+
+                                <?php
+                                if ( has_post_thumbnail() ) {
+                                    $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
+                                    echo '<a href="' . $large_image_url[0] . '" title="' . the_title_attribute( 'echo=0' ) . '">';
+                                    the_post_thumbnail( 'thumbnail' );
+                                    echo '</a>';
+                                }
+                                ?>
+                            </figure>
+                        </li>
+
+                        <h2><?php the_title(); ?></h2>
+
+                        <?php
+                        $portfolio_description = esc_html(get_post_meta($post->ID, 'portfolio_description', true));
+                        $portfolio_link = esc_url(get_post_meta($post->ID, 'portfolio_link', true));
+                        $portfolio_quote = esc_html(get_post_meta($post->ID, 'portfolio_quote', true));
+                        $portfolio_quote_author = esc_html(get_post_meta($post->ID, 'portfolio_quote_author', true));
+                        ?>
+
+                        <?php
+                        if ($portfolio_description != '') {
+                            echo "<p>$portfolio_description</p>";
+                        }
+                        if ($portfolio_link != '') {
+                            echo '<p><a href="'.$portfolio_link.'">'.$portfolio_link.'</a></p>';
+                        } ?>
+
+                        <hr class="alt" />
+
+                        <?php if ($portfolio_quote != '') : ?>
+
+                            <blockquote>
+                                <p><?php echo $portfolio_quote; ?></p>
+                                <cite>- <?php echo $portfolio_quote_author; ?> -</cite>
+                            </blockquote>
+
+                            <hr class="alt"/>
+                        <?php endif; ?>
+
+
+
+                    <?php endforeach; ?>
+                </ul>
+            <?php else : ?>
+                <div class="box section-content align-center">
+                    <p>No images found for this post.</p>
+                </div>
+            <?php endif; ?>
 
         <?php endwhile; else: ?>
             <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>

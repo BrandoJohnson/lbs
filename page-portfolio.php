@@ -1,7 +1,7 @@
 <?php
 
 /*
-Template Name: Commercial
+Template Name: Portfolio
 */
 
 get_header(); ?>
@@ -34,14 +34,19 @@ get_header(); ?>
 			</div>
 		</div>
 
+		<div class="grayhead" style="margin:0;height:132px;width:217px;">
+			<img src="<?php bloginfo('stylesheet_directory'); ?>/images/testimonial_res.gif" alt="Testimonial">
+			<br>
+			<br>
+			<img src="<?php bloginfo('stylesheet_directory'); ?>/images/testim_2_res.gif" alt="Testimonial">
+		</div>
 	</div>
 
 	<div class="lfloat" style="width:646px;margin:0px 0px 0px 40px;">
-		<img src="<?php bloginfo('stylesheet_directory'); ?>/images/commercial_picture.jpg" width="646" height="246" alt="Residential Window Blinds">
 		<br>
 		<br>
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-			
+
 			<?php the_content(); ?>
 
 		<?php endwhile; else: ?>

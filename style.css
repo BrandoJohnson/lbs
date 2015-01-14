@@ -537,3 +537,13 @@ table.formtable   {
 .inline li {
     display: inline;
 }
+
+.portfolio-image-list {
+    list-style-type: none;
+}
+
+#gridcontainer{margin: 20px 0; width: 100%; }
+#gridcontainer h2 a{color: #77787a; font-size: 13px;}
+#gridcontainer .griditemleft{float: left; width: 278px; margin: 0 40px 40px 0;}
+#gridcontainer .griditemright{float: left; width: 278px;}
+#gridcontainer .postimage{margin: 0 0 10px 0;}
