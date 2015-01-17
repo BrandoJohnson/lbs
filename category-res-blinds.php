@@ -43,20 +43,23 @@ get_header(); ?>
 	</div>
 
 	<div class="lfloat" style="width:646px;margin:0px 0px 0px 40px;">
-		<img src="<?php bloginfo('stylesheet_directory'); ?>/images/res_picture.jpg" width="646" height="246" alt="Residential Window Blinds">
-		<br>
-		<br>
+		<p><?php single_cat_title('Currently browsing '); ?>.</p>
+
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 			<h1><?php the_title(); ?></h1>
-			<?php the_excerpt(); ?>
-			<?php the_post_thumbnail(); ?>
 
+			<div class="excerpt"><?php the_excerpt(); ?></div>
+			<div class="thumbs"><?php the_post_thumbnail(); ?></div>
+
+			<hr/>
 		<?php endwhile; else: ?>
 			<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 		<?php endif; ?>
 
-
+		<div style="text-align:center;">
+			<?php posts_nav_link( ' &#183; ', 'previous page', 'next page' ); ?>
+		</div>
 
 
 	</div>

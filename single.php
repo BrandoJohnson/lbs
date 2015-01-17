@@ -55,14 +55,7 @@
                         <li class="box">
                             <figure>
 
-                                <?php
-                                if ( has_post_thumbnail() ) {
-                                    $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
-                                    echo '<a href="' . $large_image_url[0] . '" title="' . the_title_attribute( 'echo=0' ) . '">';
-                                    the_post_thumbnail( 'thumbnail' );
-                                    echo '</a>';
-                                }
-                                ?>
+                                <?php the_post_thumbnail(mycustomsize); ?>
                             </figure>
                         </li>
 
@@ -71,8 +64,6 @@
                         <?php
                         $portfolio_description = esc_html(get_post_meta($post->ID, 'portfolio_description', true));
                         $portfolio_link = esc_url(get_post_meta($post->ID, 'portfolio_link', true));
-                        $portfolio_quote = esc_html(get_post_meta($post->ID, 'portfolio_quote', true));
-                        $portfolio_quote_author = esc_html(get_post_meta($post->ID, 'portfolio_quote_author', true));
                         ?>
 
                         <?php
@@ -86,11 +77,6 @@
                         <hr class="alt" />
 
                         <?php if ($portfolio_quote != '') : ?>
-
-                            <blockquote>
-                                <p><?php echo $portfolio_quote; ?></p>
-                                <cite>- <?php echo $portfolio_quote_author; ?> -</cite>
-                            </blockquote>
 
                             <hr class="alt"/>
                         <?php endif; ?>

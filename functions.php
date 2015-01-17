@@ -34,7 +34,8 @@ function my_styles(){
 
 if (function_exists('add_theme_support')) {
     add_theme_support('post-thumbnails');
-    set_post_thumbnail_size(646, 246);
+    set_post_thumbnail_size( 300, 200, false );
+    add_image_size( 'mycustomsize', 660, 590, true );
 }
 
 
@@ -47,7 +48,7 @@ add_action('add_meta_boxes', 'custom_add_meta_box');
 function custom_add_meta_box() {
     add_meta_box(
         'portfolio_details',  // ID
-        'portfolio_entry_details', // Title
+        'Additional Info', // Title
         'custom_display_meta_box', // Callback
         'post',                    // Targeted Post Type
         'normal'                   // Position
@@ -57,8 +58,6 @@ function custom_add_meta_box() {
 function custom_display_meta_box($post) {
     $portfolio_description = get_post_meta($post->ID, 'portfolio_description', true);
     $portfolio_link = get_post_meta($post->ID, 'portfolio_link', true);
-    $portfolio_quote = get_post_meta($post->ID, 'portfolio_quote', true);
-    $portfolio_quote_author = get_post_meta($post->ID, 'portfolio_quote_author', true);
 
     // Security check
     wp_nonce_field('portfolio_meta_nonce', 'portfolio_nonce');
@@ -67,20 +66,12 @@ function custom_display_meta_box($post) {
     ?>
 
     <p>
-        <label for="portfolio_description">Project Description:</label>
+        <label for="portfolio_description">Description:</label>
         <textarea class="widefat" name="portfolio_description" id="portfolio_description" cols="30" rows="10"><?php echo $portfolio_description; ?></textarea>
     </p>
     <p>
-        <label for="portfolio_link">Link:</label><br />
+        <label for="portfolio_link">Read More Link:</label><br />
         <input type="text" name="portfolio_link" id="portfolio_link" value="<?php echo $portfolio_link; ?>" />
-    </p>
-    <p>
-        <label for="portfolio_quote">Quote:</label>
-        <textarea class="widefat" name="portfolio_quote" id="portfolio_quote" cols="30" rows="10"><?php echo $portfolio_quote; ?></textarea>
-    </p>
-    <p>
-        <label for="portfolio_quote_author">Quote Author:</label><br />
-        <input type="text" name="portfolio_quote_author" id="portfolio_quote_author" value="<?php echo $portfolio_quote_author; ?>" />
     </p>
 
 <?php
@@ -101,12 +92,6 @@ function custom_save_portfolio_details($post_id) {
     }
     if(isset($_POST['portfolio_link']) && $_POST['portfolio_link'] != '') {
         update_post_meta($post_id, 'portfolio_link', esc_url($_POST['portfolio_link']));
-    }
-    if(isset($_POST['portfolio_quote']) && $_POST['portfolio_quote'] != '') {
-        update_post_meta($post_id, 'portfolio_quote', esc_html($_POST['portfolio_quote']));
-    }
-    if(isset($_POST['portfolio_quote_author']) && $_POST['portfolio_quote_author'] != '') {
-        update_post_meta($post_id, 'portfolio_quote_author', esc_html($_POST['portfolio_quote_author']));
     }
 }
 
