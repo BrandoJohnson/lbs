@@ -71,7 +71,7 @@
                             echo "<p>$portfolio_description</p>";
                         }
                         if ($portfolio_link != '') {
-                            echo '<p><a href="'.$portfolio_link.'">'.$portfolio_link.'</a></p>';
+                            echo '<p><a href="'.$portfolio_link.'" class="btn btn-success btn-large">Learn more</a></p>';
                         } ?>
 
                         <hr class="alt" />

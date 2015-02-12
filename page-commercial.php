@@ -15,11 +15,11 @@ get_header(); ?>
 	<div class="leftsidebox">
 		<div class="leftnavbox">
 			<div style="margin:20px 0px 0px 0px;">
-				<a href="#">Blinds</a>
-				<a href="#">Shades</a>
-				<a href="#">Shutters</a>
-				<a href="#">Fabric Solutions</a>
-				<a href="#">Motorization Options</a>
+				<a href="/category/com-blinds/">Blinds</a>
+				<a href="/category/com-shades/">Shades</a>
+				<a href="/category/com-shutters/">Shutters</a>
+				<a href="/category/com-fabric-solutions/">Fabric Solutions</a>
+				<a href="/category/com-motorization-options/">Motorization Options</a>
 			</div>
 		</div>
 
@@ -43,6 +43,18 @@ get_header(); ?>
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			
 			<?php the_content(); ?>
+			<div style="margin-left:80px;margin-bottom:2em;">
+				<table border="0">
+					<tr>
+						<td><img src="<?php bloginfo('stylesheet_directory'); ?>/images/vendors/bali_logo_lg.gif" alt="custom vertical blinds mn"></td>
+						<td><img src="<?php bloginfo('stylesheet_directory'); ?>/images/vendors/mecho_logo.gif" alt="custom vertical blinds" /></td>
+					</tr>
+					<tr>
+						<td height="36"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/vendors/hd_contract.gif" alt="vertical blinds installation hopkins mn" /></td>
+						<td><img src="<?php bloginfo('stylesheet_directory'); ?>/images/vendors/logo_SWFcontract_lg2.gif" alt="custom vertical blinds hopkins mn"></td>
+					</tr>
+				</table>
+			</div>
 
 		<?php endwhile; else: ?>
 			<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
